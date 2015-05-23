@@ -19,7 +19,7 @@ module.exports = function (cb) {
 		}
 
 		if (!res) {
-			cb('This computer doesn\'t have a battery');
+			cb(new Error('This computer doesn\'t have a battery'));
 			return;
 		}
 
