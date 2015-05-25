@@ -1,5 +1,6 @@
 'use strict';
 var execFile = require('child_process').execFile;
+var plist = require('simple-plist');
 
 module.exports = function (cb) {
 	if (process.platform !== 'darwin') {
@@ -7,9 +8,12 @@ module.exports = function (cb) {
 	}
 
 	var arr;
-	var cmd = 'system_profiler';
+	var cmd = 'ioreg';
 	var args = [
-		'SPPowerDataType'
+		'-n',
+		'AppleSmartBattery',
+		'-r',
+		'-a'
 	];
 
 	execFile(cmd, args, function (err, res) {
@@ -23,46 +27,6 @@ module.exports = function (cb) {
 			return;
 		}
 
-		arr = res.trim().split('\n');
-		arr = arr.splice(5, arr.length - 1);
-
-		var obj = {};
-		var keys = {
-			'Serial Number': 'sn',
-			Manufacturer: 'manufacter',
-			'Device Name': 'name',
-			'Pack Lot Code': 'packLotCode',
-			'PCB Lot Code': 'PCB',
-			'Firmware Version': 'firmware',
-			'Hardware Revision': 'hardwareRevision',
-			'Cell Revision': 'cellRevision',
-			'Charge Remaining (mAh)': 'mAhRemaining',
-			'Fully Charged': 'charged',
-			Charging: 'charging',
-			'Full Charge Capacity (mAh)': 'mAhCapacity',
-			'Cycle Count': 'cycles',
-			Condition: 'condition',
-			'Battery Installed': 'installed',
-			'Amperage (mA)': 'amperage',
-			'Voltage (mV)': 'voltage'
-		};
-
-		Object.keys(arr).forEach(function (key) {
-			var s = arr[key].split(':');
-
-			if (!s[0] || !s[1]) {
-				return;
-			}
-
-			if (s[0].trim() === 'Charge Information' || s[0].trim() === 'Health Information') {
-				return;
-			}
-
-			if (keys[s[0].trim()]) {
-				obj[keys[s[0].trim()]] = s[1].trim();
-			}
-		});
-
-		cb(null, obj);
+		cb(null, plist.parse(res)[0]);
 	});
 };

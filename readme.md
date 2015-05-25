@@ -19,23 +19,19 @@ osxBattery(function (err, res) {
 	console.log(res);
 	/*
 	{ 
-		sn: 'C01XXX04DPF9CRA8',
-		manufacter: 'DP',
-		name: 'bq2Xz451',
-		packLotCode: '0',
-		PCB: '0',
-		firmware: '702',
-		hardwareRevision: '1',
-		cellRevision: '1206',
-		mAhRemaining: '2682',
-		charged: 'No',
-		charging: 'No',
-		mAhCapacity: '8486',
-		cycles: '38',
-		condition: 'Normal',
-		installed: 'Yes',
-		amperage: '−1566',
-		voltage: '11203' 
+		AdapterInfo: 0,
+		Amperage: 0,
+		AvgTimeToEmpty: 65535,
+		AvgTimeToFull: 65535,
+		BatteryInstalled: true,
+		BatteryInvalidWakeSeconds: 30,
+		BatterySerialNumber: 'C01447304DPF9CRA8',
+		BootPathUpdated: 1431448419,
+		CellVoltage: [ 4262, 4262, 4262, 0 ],
+		CurrentCapacity: 8424,
+		CycleCount: 39,
+		DesignCapacity: 8440,
+		...
 	}
 	*/
 });
