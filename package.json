@@ -1,6 +1,6 @@
 {
   "name": "osx-battery",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Get information about your Battery",
   "license": "MIT",
   "repository": "gillstrom/osx-battery",
