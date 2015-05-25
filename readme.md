@@ -56,6 +56,11 @@ $ osx-battery --help
 ```
 
 
+## Related
+
+* [battery-level](https://github.com/gillstrom/battery-level) - Get current battery level
+
+
 ## License
 
 MIT © [Andreas Gillström](http://github.com/gillstrom)
