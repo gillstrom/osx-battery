@@ -42,20 +42,6 @@ osxBattery(function (err, res) {
 ```
 
 
-## CLI
-
-```
-$ npm install --global osx-battery
-```
-
-```
-$ osx-battery --help
-
-  Usage
-    $ osx-battery
-```
-
-
 ## Related
 
 * [battery-level](https://github.com/gillstrom/battery-level) - Get current battery level
