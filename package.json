@@ -15,16 +15,12 @@
   "scripts": {
     "test": "node test.js"
   },
-  "bin": "cli.js",
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
     "app",
     "battery",
-    "cli",
-    "cli-app",
     "mac",
     "osx",
     "os x"
