@@ -19,18 +19,17 @@ osxBattery(function (err, res) {
 	console.log(res);
 	/*
 	{ 
-		AdapterInfo: 0,
-		Amperage: 0,
-		AvgTimeToEmpty: 65535,
-		AvgTimeToFull: 65535,
-		BatteryInstalled: true,
-		BatteryInvalidWakeSeconds: 30,
-		BatterySerialNumber: 'C01447304DPF9CRA8',
-		BootPathUpdated: 1431448419,
-		CellVoltage: [ 4262, 4262, 4262, 0 ],
-		CurrentCapacity: 8424,
-		CycleCount: 39,
-		DesignCapacity: 8440,
+		adapterInfo: 0,
+		amperage: -1178,
+		avgTimeToEmpty: 380,
+		avgTimeToFull: 65535,
+		batteryInstalled: true,
+		batteryInvalidWakeSeconds: 30,
+		batterySerialNumber: 'C01447304DPF9CRA8',
+		bootPathUpdated: 1431448419,
+		cellVoltage: [ 4098, 4105, 4104, 0 ],
+		currentCapacity: 7468,
+		cycleCount: 39,
 		...
 	}
 	*/
