@@ -42,9 +42,9 @@ osxBattery(function (err, res) {
 ```
 
 
-## CLI
+## Related
 
-See the [battery-level](https://github.com/gillstrom/battery-level) CLI.
+* [battery-level](https://github.com/gillstrom/battery-level) - Get current battery level
 
 
 ## License
