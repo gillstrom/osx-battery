@@ -1,4 +1,4 @@
-# osx-battery [![Build Status](https://travis-ci.org/gillstrom/osx-battery.svg?branch=master)](https://travis-ci.org/gillstrom/osx-battery)
+# osx-battery
 
 > Get information about your Battery
 
