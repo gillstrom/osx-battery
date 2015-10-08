@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "xo && node test.js"
   },
   "files": [
     "index.js"
@@ -21,16 +21,21 @@
   "keywords": [
     "app",
     "battery",
+    "get",
+    "info",
+    "information",
     "mac",
-    "osx",
-    "os x"
+    "osx"
   ],
   "dependencies": {
-    "change-case": "^2.3.0",
-    "meow": "^3.1.0",
+    "lowercase-first-keys": "^1.0.0",
+    "obj-type": "^1.0.0",
+    "pify": "^2.2.0",
+    "pinkie-promise": "^1.0.0",
     "simple-plist": "0.0.4"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "0.0.4",
+    "xo": "*"
   }
 }

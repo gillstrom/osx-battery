@@ -13,9 +13,9 @@ $ npm install --save osx-battery
 ## Usage
 
 ```js
-var osxBattery = require('osx-battery');
+const osxBattery = require('osx-battery');
 
-osxBattery(function (err, res) {
+osxBattery().then(res => {
 	console.log(res);
 	/*
 	{ 

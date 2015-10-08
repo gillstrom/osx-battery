@@ -3,10 +3,9 @@ var test = require('ava');
 var osxBattery = require('./');
 
 test('battery', function (t) {
-	t.plan(2);
+	t.plan(1);
 
-	osxBattery(function (err, res) {
-		t.assert(!err, err);
+	osxBattery().then(function (res) {
 		t.assert(typeof res === 'object', res);
 	});
 });
