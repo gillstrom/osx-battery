@@ -1,11 +1,10 @@
 'use strict';
 var test = require('ava');
-var osxBattery = require('./');
+var fn = require('./');
 
-test('battery', function (t) {
+test(async t => {
 	t.plan(1);
 
-	osxBattery().then(function (res) {
-		t.assert(typeof res === 'object', res);
-	});
+	const obj = await fn();
+	t.ok(obj);
 });
