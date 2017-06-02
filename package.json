@@ -31,7 +31,6 @@
     "execa": "^0.6.3",
     "lowercase-first-keys": "^1.0.0",
     "obj-type": "^1.0.0",
-    "pify": "^3.0.0",
     "simple-plist": "0.2.1"
   },
   "devDependencies": {
