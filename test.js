@@ -1,10 +1,8 @@
-'use strict';
-var test = require('ava');
-var fn = require('./');
+import test from 'ava';
+import m from '.';
 
 test(async t => {
-	t.plan(1);
-
-	const obj = await fn();
-	t.ok(obj);
+	const res = await m();
+	t.is(typeof res.adapterInfo, 'number');
+	t.is(typeof res.iORegistryEntryName, 'string');
 });
