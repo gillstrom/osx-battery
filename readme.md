@@ -18,7 +18,7 @@ const osxBattery = require('osx-battery');
 osxBattery().then(res => {
 	console.log(res);
 	/*
-	{ 
+	{
 		adapterInfo: 0,
 		amperage: -1178,
 		avgTimeToEmpty: 380,

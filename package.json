@@ -1,46 +1,40 @@
 {
-  "name": "osx-battery",
-  "version": "4.0.0",
-  "description": "Get information about your Battery",
-  "license": "MIT",
-  "repository": "gillstrom/osx-battery",
-  "author": {
-    "name": "Andreas Gillström",
-    "email": "andreasgillstrom@gmail.com",
-    "url": "github.com/gillstrom"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "app",
-    "battery",
-    "get",
-    "info",
-    "information",
-    "mac",
-    "osx"
-  ],
-  "dependencies": {
-    "lowercase-first-keys": "^1.0.0",
-    "obj-type": "^1.0.0",
-    "pify": "^2.2.0",
-    "pinkie-promise": "^1.0.0",
-    "simple-plist": "0.0.4"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "ignores": [
-      "test.js"
-    ]
-  }
+	"name": "osx-battery",
+	"version": "4.0.0",
+	"description": "Get information about your Battery",
+	"license": "MIT",
+	"repository": "gillstrom/osx-battery",
+	"author": {
+		"name": "Andreas Gillström",
+		"email": "andreasgillstrom@gmail.com",
+		"url": "github.com/gillstrom"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"app",
+		"battery",
+		"get",
+		"info",
+		"information",
+		"mac",
+		"osx"
+	],
+	"dependencies": {
+		"execa": "^0.7.0",
+		"lowercase-first-keys": "^1.0.0",
+		"obj-type": "^1.0.0",
+		"simple-plist": "0.2.1"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
