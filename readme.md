@@ -13,27 +13,24 @@ $ npm install --save osx-battery
 ## Usage
 
 ```js
-const osxBattery = require('osx-battery');
+import osxBattery from 'osx-battery';
 
-osxBattery().then(res => {
-	console.log(res);
-	/*
-	{
-		adapterInfo: 0,
-		amperage: -1178,
-		avgTimeToEmpty: 380,
-		avgTimeToFull: 65535,
-		batteryInstalled: true,
-		batteryInvalidWakeSeconds: 30,
-		batterySerialNumber: 'C01447304DPF9CRA8',
-		bootPathUpdated: 1431448419,
-		cellVoltage: [ 4098, 4105, 4104, 0 ],
-		currentCapacity: 7468,
-		cycleCount: 39,
-		...
-	}
-	*/
-});
+const res = await osxBattery();
+console.log(res);
+/* {
+	adapterInfo: 0,
+	amperage: -1178,
+	avgTimeToEmpty: 380,
+	avgTimeToFull: 65535,
+	batteryInstalled: true,
+	batteryInvalidWakeSeconds: 30,
+	batterySerialNumber: 'C01447304DPF9CRA8',
+	bootPathUpdated: 1431448419,
+	cellVoltage: [ 4098, 4105, 4104, 0 ],
+	currentCapacity: 7468,
+	cycleCount: 39,
+	...
+} */
 ```
 
 

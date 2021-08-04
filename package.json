@@ -9,8 +9,9 @@
 		"email": "andreasgillstrom@gmail.com",
 		"url": "github.com/gillstrom"
 	},
+	"type": "module",
 	"engines": {
-		"node": ">=4"
+		"node": "12.20"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -28,10 +29,10 @@
 		"osx"
 	],
 	"dependencies": {
-		"execa": "^0.7.0",
-		"lowercase-first-keys": "^1.0.0",
-		"obj-type": "^1.0.0",
-		"simple-plist": "0.2.1"
+		"execa": "^5.1.1",
+		"lowercase-first-keys": "^1.0.1",
+		"obj-type": "^1.0.1",
+		"simple-plist": "^1.1.1"
 	},
 	"devDependencies": {
 		"ava": "*",

@@ -1,8 +1,8 @@
 import test from 'ava';
-import m from '.';
+import m from './index.js';
 
-test(async t => {
-	const res = await m();
-	t.is(typeof res.adapterInfo, 'number');
-	t.is(typeof res.iORegistryEntryName, 'string');
+test('get battery', async t => {
+	const result = await m();
+	t.is(typeof result.adapterInfo, 'number');
+	t.is(typeof result.iORegistryEntryName, 'string');
 });
