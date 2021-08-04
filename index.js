@@ -1,12 +1,15 @@
 import {platform} from 'node:process';
-import execa from 'execa';
+import {promisify} from 'node:util';
+import {exec} from 'node:child_process';
 import {parse} from 'simple-plist';
 import objType from 'obj-type';
 import lowercaseFirstKeys from 'lowercase-first-keys';
 
+const run = promisify(exec);
+
 export default platform === 'darwin'
 	? async () => {
-		const {stdout} = await execa('ioreg', ['-n', 'AppleSmartBattery', '-r', '-a']);
+		const {stdout} = await run('ioreg -n AppleSmartBattery -r -a');
 		const batteries = parse(stdout);
 
 		if (!batteries || batteries.length === 0) {
@@ -20,7 +23,6 @@ export default platform === 'darwin'
 			const value = battery[key];
 			result[key] = objType(value) === 'object' ? lowercaseFirstKeys(value) : value;
 		}
-
 
 		return result;
 	}
